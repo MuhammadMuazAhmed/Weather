@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+<nav class="navbar">
+  <div class="navbar-container">
+    <a href="#" class="navbar-logo">WeatherApp</a>
+    <ul class="navbar-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#fiveDayForecast">5-Day Forecast</a></li>
+      <li><a href="#topCities">Top Cities</a></li>
+      <li><a href="#search">Search</a></li>
+    </ul>
+    <div class="navbar-toggle" id="navbar-toggle">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </div>
+</nav>
+
+    <div class="theme-selector">
+      <label for="theme">Choose Theme:</label>
+      <select id="theme">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+        <option value="custom">Custom</option>
+      </select>
+    </div>
+    <div id="customThemeOptions" class="custom-theme-options hidden">
+      <label>
+        Background Color:
+        <input type="color" id="bgColor" value="#ffffff" />
+      </label>
+      <label>
+        Text Color:
+        <input type="color" id="textColor" value="#000000" />
+      </label>
+      <button id="applyCustomTheme">Apply</button>
+    </div>
+    
+    <div class="container">
+      <h1>Weather App</h1>
+      <form id="weatherForm">
+        <input type="text" id="cityInput" placeholder="Enter city" required />
+        <button type="submit">Get Weather</button>
+      </form>
+    </div>
+  
+    <!-- Weather for searched city -->
+    <div id="weatherResult" class="weather-result">
+      <h2 id="cityName"></h2>
+      <p id="temperature"></p>
+      <p id="description"></p>
+    </div>
+  
+    <!-- 5-day forecast -->
+    <h2 id="forecastTitle">5-Day Weather Forecast</h2>
+    <div id="fiveDayForecast" class="forecast-container"></div>
+  
+    <!-- Weather for top cities -->
+    <h2>Weather for Top Cities</h2>
+    <div id="topCities" class="top-cities"></div>
+  
+    <!-- Modal for detailed weather -->
+    <div id="weatherModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2 id="modalCityName"></h2>
+        <p id="modalTemperature"></p>
+        <p id="modalDescription"></p>
+        <p id="modalHumidity"></p>
+        <p id="modalWindSpeed"></p>
+        <p id="modalPressure"></p>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2024 WeatherApp. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms-of-service">Terms of Service</a>
+          <a href="/contact">Contact Us</a>
+        </div>
+      </div>
+    </footer>
+  
+    <script src="file.js"></script>
+  </body>
+</html>
